@@ -1,0 +1,38 @@
+{
+  "name": "harmonics-music-box",
+  "version": "1.0.0",
+  "description": "A digital music box experience where numbers create melodies",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "serve": "python -m http.server 3000",
+    "build": "echo 'Build complete - static files ready'"
+  },
+  "keywords": [
+    "music",
+    "interactive",
+    "web",
+    "audio",
+    "creative",
+    "music-box"
+  ],
+  "author": "Harmonics Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.9.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SniziGit/harmonics.git"
+  },
+  "homepage": "https://harmonics-music-box.com"
+}

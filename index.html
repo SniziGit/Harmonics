@@ -3,133 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Harmonics Music Box — build and play musical sequences." />
-  <title>Harmonics — Music Box</title>
+  <meta name="description" content="Harmonics - A digital music box experience where numbers create melodies." />
+  <title>Harmonics - Create Music with Numbers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/salted" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="Harmonics home">
-        <span class="brand-mark" aria-hidden="true"></span>
+      <a class="brand" href="index.html" aria-label="Harmonics home">
         <img src="assets/logo.png" alt="Harmonics" class="brand-logo" width="50px">
         <span class="brand-text">Harmonics</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a class="nav-link" href="#music-box">Music Box</a>
-        <a class="nav-link" href="#how-it-works">How it works</a>
-        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="music-box.html">Music Box</a>
+        <a class="nav-link" href="#demo">Try Demo</a>
+        <a class="nav-link" href="#pricing">Get Full Access</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <!-- Cinematic Hero Section -->
+    <section class="hero-cinematic">
+      <div class="hero-background">
+        <div class="hero-particles"></div>
+        <div class="hero-gradient"></div>
+      </div>
       <div class="shell hero-inner">
-        <div class="hero-copy">
-          <h1 class="hero-title">Play, connect & build harmony.</h1>
-          <p class="hero-subtitle">A music box for quick, fun experiments — tap notes, make patterns, and vibe.</p>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-text">New Experience</span>
+          </div>
+          <h1 class="hero-title">
+            Where Numbers<br>
+            <span class="hero-title-accent">Become Music</span>
+          </h1>
+          <p class="hero-subtitle">
+            Transform simple number sequences into beautiful melodies with our digital music box experience. 
+            Create, play, and share your musical patterns in a world where math meets harmony.
+          </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#music-box">Open Music Box</a>
-            <a class="btn btn-ghost" href="#how-it-works">Learn more</a>
+            <a class="btn btn-primary btn-large" href="#demo">
+              <span class="btn-icon"></span>
+              Try Music Box Free
+            </a>
+            <a class="btn btn-ghost btn-large" href="music-box.html">
+              <span class="btn-icon"></span>
+              Full Music Box
+            </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="music-box">
-      <div class="shell">
-        <div class="section-head">
-          <h2 class="section-title">Music Box</h2>
-          <p class="section-subtitle">Tap notes to build a little melody trail, then play it back at your own pace.</p>
-        </div>
-
-        <div class="app-grid">
-          <div class="panel">
-            <div class="panel-head">
-              <h3 class="panel-title">Notes</h3>
-              <p class="panel-subtitle">Select up to 48 notes.</p>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">48</div>
+              <div class="stat-label">Musical Notes</div>
             </div>
-            <div class="buttons" id="number-buttons"></div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-head">
-              <h3 class="panel-title">Playback</h3>
-              <p class="panel-subtitle">Control tempo, looping, and actions.</p>
+            <div class="stat">
+              <div class="stat-number">10K+</div>
+              <div class="stat-label">Sequences Created</div>
             </div>
-
-            <div class="panel-body">
-              <fieldset class="controls">
-                <legend>Controls</legend>
-                <div class="control-row">
-                  <label class="control-label" for="loop">Loop</label>
-                  <input type="checkbox" id="loop" />
-                </div>
-
-                <div class="control-row">
-                  <label class="control-label" for="speedSlider">Speed</label>
-                  <input type="range" id="speedSlider" min="0.25" max="2" value="1" step="0.05">
-                </div>
-              </fieldset>
-
-              <div class="sequence">
-                <div class="sequence-label">Sequence</div>
-                <div class="sequence-value" id="sequenceDisplay">None</div>
-              </div>
-
-              <div class="actions">
-                <button class="btn btn-primary" id="play" aria-label="Play sequence">Play</button>
-                <button class="btn btn-secondary" id="stop" aria-label="Stop sequence">Stop</button>
-                <button class="btn btn-secondary" id="clear" aria-label="Clear sequence">Clear</button>
-                <button class="btn btn-ghost" id="random" aria-label="Generate random sequence">Random</button>
-              </div>
-
-              <div id="status" aria-live="polite" class="status"></div>
+            <div class="stat">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Sound Packs</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="how-it-works">
+    <!-- Video Introduction Section -->
+    <section class="section section-dark" id="video">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">How it works</h2>
-          <p class="section-subtitle">No fuss — just tap, play, and tweak until it feels right.</p>
+          <h2 class="section-title">The Harmonics Experience</h2>
+          <p class="section-subtitle">Discover how simple numbers can create beautiful music</p>
         </div>
-
-        <div class="features">
-          <div class="feature">
-            <div class="feature-title">Build</div>
-            <div class="feature-body">Tap note buttons to create an ordered sequence.</div>
+        
+        <div class="video-container">
+          <div class="video-placeholder">
+            <div class="video-play-button">
+              <div class="play-icon"></div>
+            </div>
+            <div class="video-thumbnail">
+              <img src="assets/video-thumb.jpg" alt="Harmonics Introduction Video">
+            </div>
+            <div class="video-overlay"></div>
           </div>
-          <div class="feature">
-            <div class="feature-title">Play</div>
-            <div class="feature-body">Playback runs through the sequence and highlights the active note.</div>
-          </div>
-          <div class="feature">
-            <div class="feature-title">Refine</div>
-            <div class="feature-body">Adjust speed, loop endlessly, or generate a new random idea.</div>
+          <div class="video-content">
+            <h3>What is Harmonics?</h3>
+            <p>Harmonics is a digital music box experience where creativity meets simplicity. Each number represents a unique musical note, allowing you to compose melodies by creating sequences of numbers.</p>
+            <ul class="video-features">
+              <li>Intuitive number-to-note system</li>
+              <li>Real-time audio feedback</li>
+              <li>Multiple instrument sound packs</li>
+              <li>Share your creations with friends</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- Interactive Demo Section -->
+    <section class="section" id="demo">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-subtitle">Come say hi — we’re building Harmonics in public.</p>
+          <h2 class="section-title">Try The Music Box</h2>
+          <p class="section-subtitle">Experience the magic instantly - create your first melody right here</p>
         </div>
-        <div class="contact-card">
-          <div class="contact-item">
-            <div class="contact-label">Instagram</div>
-            <a class="contact-link" href="https://www.instagram.com/harmonics.sg/" target="_blank" rel="noreferrer">@harmonics.sg</a>
+
+        <div class="demo-container">
+          <div class="demo-panel">
+            <div class="demo-header">
+              <h3>Quick Demo</h3>
+              <p>Click numbers to create a sequence, then press play</p>
+            </div>
+            <div class="demo-buttons" id="demo-buttons"></div>
+            <div class="demo-controls">
+              <button class="btn btn-primary" id="demo-play">Play Sequence</button>
+              <button class="btn btn-secondary" id="demo-clear">Clear</button>
+              <button class="btn btn-ghost" id="demo-random">Random</button>
+            </div>
+            <div class="demo-sequence">
+              <div class="sequence-label">Your Sequence:</div>
+              <div class="sequence-value" id="demo-sequence-display">Click numbers to start</div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <h4>How It Works</h4>
+            <ol class="demo-steps">
+              <li><strong>Click numbers</strong> - Each number represents a musical note</li>
+              <li><strong>Build patterns</strong> - Create sequences up to 12 numbers long</li>
+              <li><strong>Press play</strong> - Hear your melody come to life</li>
+              <li><strong>Experiment</strong> - Try different combinations and speeds</li>
+            </ol>
+            <div class="demo-cta">
+              <p class="demo-upgrade">Want more features?</p>
+              <a class="btn btn-primary" href="music-box.html">Open Full Music Box</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-dark">
+      <div class="shell">
+        <div class="section-head">
+          <h2 class="section-title">Why Choose Harmonics?</h2>
+          <p class="section-subtitle">Built for creativity, designed for everyone</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">1</div>
+            <h3 class="feature-title">Simple & Intuitive</h3>
+            <p class="feature-description">No musical experience needed. If you can count, you can create music.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">2</div>
+            <h3 class="feature-title">Instant Feedback</h3>
+            <p class="feature-description">Hear your creations immediately with real-time audio playback.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">3</div>
+            <h3 class="feature-title">Creative Freedom</h3>
+            <p class="feature-description">Endless possibilities with 48 notes and multiple sound packs.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">4</div>
+            <h3 class="feature-title">Share & Connect</h3>
+            <p class="feature-description">Export your sequences and share them with the community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+      <div class="shell">
+        <div class="section-head">
+          <h2 class="section-title">Choose Your Experience</h2>
+          <p class="section-subtitle">Start free, upgrade when you're ready</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Free Demo</h3>
+              <div class="pricing-price">$0</div>
+              <p class="pricing-description">Try the core experience</p>
+            </div>
+            <ul class="pricing-features">
+              <li>12 musical notes</li>
+              <li>Basic music box sounds</li>
+              <li>Sequence playback</li>
+              <li>Speed control</li>
+            </ul>
+            <button class="btn btn-secondary btn-full" onclick="location.href='#demo'">
+              Try Free Demo
+            </button>
+          </div>
+
+          <div class="pricing-card pricing-featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Full Access</h3>
+              <div class="pricing-price">$9.99</div>
+              <p class="pricing-description">One-time purchase</p>
+            </div>
+            <ul class="pricing-features">
+              <li>48 musical notes</li>
+              <li>5 instrument sound packs</li>
+              <li>Advanced controls</li>
+              <li>Sequence saving & sharing</li>
+              <li>AI melody generator</li>
+              <li>Future updates included</li>
+            </ul>
+            <button class="btn btn-primary btn-full" id="buy-full-access">
+              Get Full Access
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Features Section -->
+    <section class="section section-dark">
+      <div class="shell">
+        <div class="section-head">
+          <h2 class="section-title">Coming Soon</h2>
+          <p class="section-subtitle">The future of musical creativity</p>
+        </div>
+
+        <div class="future-grid">
+          <div class="future-item">
+            <div class="future-icon">AI</div>
+            <h3>AI Music Generator</h3>
+            <p>Describe a mood or idea and let AI create the perfect number sequence for you.</p>
+          </div>
+          <div class="future-item">
+            <div class="future-icon">Piano</div>
+            <h3>More Instruments</h3>
+            <p>Piano, synth, strings, and more sound packs to expand your musical palette.</p>
+          </div>
+          <div class="future-item">
+            <div class="future-icon">Community</div>
+            <h3>Community Features</h3>
+            <p>Share, discover, and collaborate with other Harmonics creators.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section">
+      <div class="shell">
+        <div class="final-cta">
+          <h2>Ready to Create Your First Melody?</h2>
+          <p>Join thousands of creators discovering the joy of number-based music</p>
+          <div class="final-cta-buttons">
+            <a class="btn btn-primary btn-large" href="#demo">Start Creating Free</a>
+            <a class="btn btn-ghost btn-large" href="music-box.html">Open Full Music Box</a>
           </div>
         </div>
       </div>
@@ -138,11 +276,25 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div class="footer-left">© Harmonics</div>
-      <div class="footer-right">Play, connect & build harmony.</div>
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Harmonics" class="footer-logo" width="40px">
+          <span>Harmonics</span>
+        </div>
+        <p class="footer-copyright">© 2024 Harmonics. Play, connect & build harmony.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms</a>
+          <a href="https://www.instagram.com/harmonics.sg/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <!-- Stripe Checkout Script -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="landing.js" defer></script>
 </body>
 </html>
